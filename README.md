@@ -40,7 +40,7 @@ To run E2E tests use the following command:
 
 ### Client tests
 
-To run E2E tests use the following command: 
+To run tests use the following command: 
 
 - tests: `npm test -- a`
 
