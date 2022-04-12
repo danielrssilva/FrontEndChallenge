@@ -1,13 +1,8 @@
-import {
-  useQuery,
-  QueryObserverResult,
-  InfiniteQueryObserverResult,
-  useInfiniteQuery,
-} from "react-query";
+import { useQuery, QueryObserverResult } from "react-query";
 import CardResource from "../interfaces/resources/CardResource";
 import CardService from "../services/CardsService";
 
-function useCards(page: number): QueryObserverResult<CardResource[]> {
+function useCards(page: number = 1): QueryObserverResult<CardResource[]> {
   return useQuery<CardResource[]>(
     ["cards", page],
     () => CardService.getCardsPaginated(page),
@@ -19,17 +14,19 @@ function useCards(page: number): QueryObserverResult<CardResource[]> {
   );
 }
 
-export function useInfiniteCards(
-  page: number
-): InfiniteQueryObserverResult<CardResource[]> {
-  return useInfiniteQuery<CardResource[]>(
-    ["cards", page],
-    () => CardService.getCardsPaginated(page),
+export function useCardsByTerm(
+  page: number = 1,
+  term: string,
+  enabled = true
+): QueryObserverResult<CardResource[]> {
+  return useQuery<CardResource[]>(
+    ["cards", term],
+    () => CardService.getCardsByTerm(page, term),
     {
-      staleTime: 1000 * 60,
-      refetchOnWindowFocus: false,
-      keepPreviousData: true,
-      getNextPageParam: () => page + 1,
+      enabled,
+      staleTime: 0,
+      retry: 0,
+      cacheTime: 0,
     }
   );
 }

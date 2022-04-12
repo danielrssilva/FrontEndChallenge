@@ -2,7 +2,10 @@ import CardResource from "./resources/CardResource";
 
 interface CardResponse {
   data: CardResource | CardResource[];
-  next: number | undefined;
+  page: number;
+  pageSize: number;
+  count: number;
+  totalCount: number;
 }
 
 export default CardResponse;

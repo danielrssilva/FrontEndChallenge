@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { HashRouter } from "react-router-dom";
 import App from "./containers/App/App";
 import { LoadingOutlined } from "@ant-design/icons";
+import "./configs/I18n";
 
 ReactDOM.render(
   <Suspense fallback={<LoadingOutlined />}>

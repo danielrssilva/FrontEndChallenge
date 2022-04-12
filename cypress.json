@@ -1,0 +1,10 @@
+{
+  "baseUrl": "http://localhost:3000/#/",
+  "video": true,
+  "videoUploadOnPasses": false,
+  "screenshotOnRunFailure": false,
+  "integrationFolder": "cypress",
+  "testFiles": "**/*.test.ts",
+  "viewPortWidth": 1680,
+  "viewPortHeight": 1050
+}

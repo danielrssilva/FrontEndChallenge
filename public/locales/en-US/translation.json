@@ -1,0 +1,29 @@
+{
+  "title": "Pokemon",
+  "navigation": {
+    "home": "Card list",
+    "recent": "Recently viewed cards"
+  },
+  "pages": {
+    "home": {
+      "next": "Next page",
+      "previous": "Previous page"
+    },
+    "details": {
+      "types": "Types",
+      "resistences": "Resistences",
+      "weaknesses": "Weaknesses",
+      "attacks": "Attacks",
+      "abilities": "Abilities",
+      "rules": "Rules"
+    }
+  },
+  "feedback": {
+    "loading": "Loading",
+    "cancel": "Close",
+    "fetching": "Searching the deck for cards..."
+  },
+  "placeholders": {
+    "search": "Type to search Pokémon name"
+  }
+}

@@ -11,6 +11,16 @@ class CardService {
     return response.data?.data as CardResource[];
   };
 
+  static getCardsByTerm = async (
+    page: number,
+    term: string
+  ): Promise<CardResource[]> => {
+    const response = await RequestService.get<CardResponse>(Endpoints.CARDS, {
+      params: { page, q: `name:"${term}*"`, orderBy: "name" },
+    });
+    return response.data?.data as CardResource[];
+  };
+
   static getCardById = async (id: string): Promise<CardResource> => {
     const response = await RequestService.get<CardResponse>(
       `${Endpoints.CARDS}/${id}`

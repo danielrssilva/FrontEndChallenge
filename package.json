@@ -12,11 +12,16 @@
     "@types/react-dom": "^17.0.11",
     "antd": "^4.19.5",
     "axios": "^0.26.1",
+    "cypress-wait-until": "^1.7.2",
+    "i18next": "^21.6.15",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "i18next-http-backend": "^1.4.0",
     "lodash": "^4.17.21",
     "query-string": "^7.1.1",
     "react": "^17.0.2",
     "react-alice-carousel": "^2.5.1",
     "react-dom": "^17.0.2",
+    "react-i18next": "^11.16.5",
     "react-query": "^3.34.19",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
@@ -38,6 +43,27 @@
       "react-app/jest"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/(components|helpers)/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/",
+      "!src/**/*.styles.ts",
+      "!src/**/*.types.ts",
+      "!src/**/index.ts",
+      "!src/services/*.ts",
+      "!<rootDir>/src/index.tsx",
+      "!src/pages/*/*.{js,jsx,ts,tsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -55,6 +81,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/react-typist": "^2.0.3",
     "@types/styled-components": "^5.1.21",
+    "cypress": "^9.5.4",
     "prettier": "2.5.1"
   }
 }

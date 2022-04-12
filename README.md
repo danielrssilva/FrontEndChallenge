@@ -1,4 +1,29 @@
-# Getting Started with Create React App
+# Pokémon TCG
+
+A app for visualizing Pokémon cards.
+
+## Installation
+
+1. You need to have node installed in order to run this app.
+
+- [Node.js](https://nodejs.org/en/download/)
+
+2. Then run the following command to install every dependency:
+   `npm install` or `yarn install`
+
+3. Finally you can start the app in the development mode by using the code: `npm start`
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+## Features
+
+- Pokémon card list
+- Search cards by name
+- View card details
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
